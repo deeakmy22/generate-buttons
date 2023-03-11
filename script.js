@@ -1,7 +1,6 @@
 const generateButtonsBtn = document.getElementById("generate-buttons");
 const numButtonsInput = document.getElementById("num-buttons");
 const buttonsContainer = document.getElementById("buttons-container");
-
 const winnerButtonIndex = Math.floor(Math.random() * numButtonsInput.value);
 
 generateButtonsBtn.addEventListener("click", () => {
