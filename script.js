@@ -2,13 +2,11 @@ const generateButtonsBtn = document.getElementById("generate-buttons");
 const numButtonsInput = document.getElementById("num-buttons");
 const buttonsContainer = document.getElementById("buttons-container");
 
-let winnerButtonIndex;
+const winnerButtonIndex = Math.floor(Math.random() * numButtonsInput.value);
 
 generateButtonsBtn.addEventListener("click", () => {
   buttonsContainer.innerHTML = "";
-  const numButtons = numButtonsInput.value;
-  winnerButtonIndex = Math.floor(Math.random() * numButtons);
-  for (let i = 0; i < numButtons; i++) {
+  for (let i = 0; i < numButtonsInput.value; i++) {
     const button = document.createElement("button");
     button.innerText = `Button ${("Button", i + 1)}`;
     button.style.marginRight = "10px";
